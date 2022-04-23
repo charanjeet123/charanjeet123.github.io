@@ -9,26 +9,26 @@
 </head>
 	<body>
 			
-		<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdGl1Wv4IdikoB8MlDmKgf1M8WsUwyCzfbYBl5AETFGnI7gwA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-			<label for="entry.2005620554">Name:</label>
+		<form id="gform" action="about.html" >
+			Name:
 			<input type="text" name="entry.2005620554" id="entry.2005620554"><br><br>
-			<label for="entry.1045781291">Email:</label>
+			Email:
 			<input type="text" name="entry.1045781291" id="entry.1045781291"><br><br>
-			<label for="entry.1166974658">Phone:</label>
+			Phone:
 			<input type="text" name="entry.1166974658" id="entry.1166974658"><br><br>
-			<label for="entry.839337160">Comments:</label>
+			Comments:
 			<input type="text" name="entry.839337160" id="entry.839337160"><br><br>
 			<input type="submit" value="Submit">
 </form>
 
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
+$("#gform").on("submit", function(event) {
+alert( "Handler for .submit() called." );
+event.preventDefault();
   $('#gform *').fadeOut(2000);
   $('#gform').prepend('Your response has been submitted...');
   });
 </script>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
 	</body>
 </html>
